@@ -1,15 +1,21 @@
+/* BODY ET GENERAL */
+
 body {
 	max-width: 1920px;
 	margin: auto;
 }
+
 * {
 	font-family: 'Inter';
 	font-style: normal;
 }
+
+/* HEADER */
+
 .top-header {
 	background-color: white;
 	position: sticky;
-	top:0;
+	top: 0;
 	z-index: 1000;
 	display: flex;
 	justify-content: space-between;
@@ -48,10 +54,13 @@ body {
 	width: 100%;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
 	width: 32px;
 	height: 32px;
 }
+
+/* ABOUT */
 
 #about {
 	display: flex;
@@ -83,14 +92,17 @@ body {
 	max-width: 560px;
 
 }
+
 #about-me {
 	flex: 2
 }
+
 .about-me__title {
 	margin-top: 1em;
 	margin-bottom: 60px;
 	font-size: 30px;
 }
+
 .about-me__introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
@@ -98,22 +110,29 @@ body {
 	width: 60%;
 	font-size: 1.2em;
 }
+
 #about-me p {
 	width: 80%;
 	font-size: 14px;
 }
 
-.title{
+/* GALERIE */
+
+.title {
 	text-align: center;
 	padding-block: 2em;
 }
+
 .gallery .nav {
 	justify-content: center;
 }
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link, .nav-pills .nav-link.active-tag {
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link,
+.nav-pills .nav-link.active-tag {
 	color: #fff;
 	background-color: #777247;
-	border-radius:0 ;
+	border-radius: 0;
 	cursor: pointer;
 }
 
@@ -124,17 +143,20 @@ body {
 .nav-pills .nav-link {
 	color: #000
 }
+
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
 	padding: 0;
 }
-.item-column::after{
+
+.item-column::after {
 	content: "";
 	display: block;
 	padding-bottom: 100%;
 
 }
+
 .gallery-item {
 	position: absolute;
 	max-width: 440px;
@@ -143,7 +165,9 @@ body {
 	object-fit: cover;
 	padding: .5em;
 }
-.mg-prev, .mg-next {
+
+.mg-prev,
+.mg-next {
 	width: 30px;
 	height: 30px;
 	border-radius: 00%;
@@ -160,24 +184,33 @@ body {
 	margin: auto;
 	padding-block: 3em;
 }
+
 .quote__text {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
 
 }
+
 .quote__author {
 	font-family: Spectral;
 	font-weight: 800;
 	font-size: 22px;
 }
 
+.modal-content {
+	align-items: center;
+}
+
+/* SERVICES */
+
 #services {
 	margin: auto;
-	background-color: #A8D5D8 ;
+	background-color: #A8D5D8;
 	position: relative;
 }
-#services .container::before{
+
+#services .container::before {
 	content: ' ';
 	background-color: #1C6474;
 	position: absolute;
@@ -191,7 +224,7 @@ body {
 #services .container {
 	justify-content: space-between;
 	display: flex;
-	padding : 2em 0;
+	padding: 2em 0;
 
 }
 
@@ -207,9 +240,11 @@ body {
 	z-index: 1;
 }
 
+/* FOOTER */
+
 #contact {
 	margin: auto;
-	background-color: #D8D3A8 ;
+	background-color: #D8D3A8;
 	position: relative;
 	padding-inline: 100px;
 	padding-block: 100px;
@@ -218,6 +253,7 @@ body {
 #contact .container {
 	display: flex;
 }
+
 .picture.right::before {
 	content: ' ';
 	background-color: #BEB45A;
@@ -228,10 +264,12 @@ body {
 	right: 0;
 	z-index: -1;
 }
+
 .form-container {
-	flex : 2;
+	flex: 2;
 
 }
+
 form {
 	display: flex;
 	flex-direction: column;
@@ -256,10 +294,13 @@ form textarea {
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
+
 input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
+
+/* AJOUT - CONTACT INFOS EN BAS DE ABOUT */
 
 .contact_infos {
 	display: flex;
@@ -269,12 +310,11 @@ input[type="submit"] {
 .contact_item {
 	display: flex;
 	flex-direction: column;
-	flex-basis: 22%;
+	width: 270px;
 }
 
 .contact_infos h2 {
 	padding: 20px 0;
-
 }
 
 .contact_infos h3 {
@@ -282,35 +322,65 @@ input[type="submit"] {
 	font-weight: bolder;
 }
 
+/* ------- RESPONSIVE PETITS ORDINATEURS ------- */
+
 @media all and (max-width: 1180px) {
 	.picture {
-		flex : 2;
+		flex: 2;
 	}
-	#about, #contact .container {
+
+	#about,
+	#contact .container {
 		align-items: center;
 	}
+
+	#about {
+		padding-inline: 60px;
+	}
+
 	.about-me__title {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
-		width: 100%;
-	}
-}
 
-@media all and (max-width: 1000px) {
-	#about{
-		flex-direction: column;
-	}
-	.picture {
-		width: 50%;
-	}
+	#about-me h6,
+	#about-me p,
 	.about-me__introduction {
 		width: 100%;
 	}
+
+	/* AJOUT - CONTACT INFOS EN BAS DE ABOUT */
+
+	.contact_item {
+		display: flex;
+		flex-direction: column;
+		width: 200px;
+	}
+
+}
+
+/* ------- RESPONSIVE TABLETTES ------- */
+
+@media all and (max-width: 1000px) {
+	#about {
+		flex-direction: column;
+	}
+
+	.picture {
+		width: 50%;
+	}
+
+	.about-me__introduction {
+		width: 100%;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+
 	#about-me p {
 		width: 100%;
+		text-align: center;
 	}
+
 	.picture.left::before {
 		width: 100%;
 		height: 30%;
@@ -320,24 +390,28 @@ input[type="submit"] {
 		left: 0;
 		z-index: -1;
 	}
-	.about-me__title{
+
+	.about-me__title {
 		text-align: center;
 		margin-top: 1em;
 	}
+
 	#services .container {
 		flex-direction: column;
 	}
+
 	.service {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
 		margin: 2em 0
 	}
-	.service__description{
+
+	.service__description {
 		margin-bottom: 1em;
 	}
 
-	#services .container::before{
+	#services .container::before {
 		width: 30%;
 		height: 100%;
 		bottom: 0;
@@ -349,9 +423,11 @@ input[type="submit"] {
 	#contact .container {
 		flex-direction: column;
 	}
+
 	#contact .picture.right {
 		margin-top: 1em;
 	}
+
 	.picture.right::before {
 		width: 100%;
 		height: 30%;
@@ -360,49 +436,86 @@ input[type="submit"] {
 		right: 0;
 		z-index: -1;
 	}
+
+	/* AJOUT - CONTACT INFOS EN BAS DE ABOUT */
+
+	.contact_infos {
+		justify-content: center;
+	}
+
+	.contact_item {
+		align-items: center;
+		text-align: center;
+	}
+
 }
+
+/* ------- RESPONSIVE TELEPHONE ------- */
 
 @media all and (max-width: 650px) {
 	.top-header {
 		flex-direction: column;
 		padding-inline: 0;
 	}
-	.top-header .nav, .top-header .nav ul {
+
+	.top-header .nav,
+	.top-header .nav ul {
 		width: 100%;
-		padding: 0 0 0 0;
+		justify-content: center;
 	}
+
 	.top-header .nav li {
 		flex: 1;
 		padding-block: 1em;
 		text-align: center;
 	}
-	.picture.left::before, .picture.right::before {
+
+	.nav li {
+		padding-inline: 0px;
+	}
+
+	.picture.left::before,
+	.picture.right::before {
 		height: 150px;
 	}
+
 	#services .container {
 		align-items: center;
 	}
+
 	.service {
 		max-width: 90%;
 	}
-	#about, #contact {
+
+	#about,
+	#contact {
 		padding-inline: 2em;
 		padding-block: 2em;
 	}
 
 	.about-me__introduction {
 		width: 100%;
+		text-align: left;
 	}
+
 	#about-me p {
 		width: 100%;
+		text-align: left;
 	}
-	
+
 	form {
 		width: 100%;
 	}
+
 	.picture {
 		width: 80%;
 	}
+
+	/* AJOUT - CONTACT INFOS EN BAS DE ABOUT */
+
+	.contact_item {
+		width: 50%;
+		align-items: flex-start;
+	}
+
 }
-
-
