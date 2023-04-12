@@ -110,11 +110,17 @@ body {
 .gallery .nav {
 	justify-content: center;
 }
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link, .nav-pills .nav-link.active-tag {
 	color: #fff;
 	background-color: #777247;
 	border-radius:0 ;
+	cursor: pointer;
 }
+
+.nav-pills {
+	cursor: pointer;
+}
+
 .nav-pills .nav-link {
 	color: #000
 }
