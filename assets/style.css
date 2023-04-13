@@ -324,6 +324,11 @@ input[type="submit"] {
 /* ------- RESPONSIVE PETITS ORDINATEURS ------- */
 
 @media all and (max-width: 1180px) {
+
+	.carousel-item {
+		max-width: 1180px;
+		width: 100%;
+	}
 	.picture {
 		flex: 2;
 	}
@@ -361,6 +366,12 @@ input[type="submit"] {
 /* ------- RESPONSIVE TABLETTES ------- */
 
 @media all and (max-width: 1000px) {
+
+	.carousel-item {
+		max-width: 1000px;
+		width: 100%;
+	}
+
 	#about {
 		flex-direction: column;
 	}
@@ -471,6 +482,11 @@ input[type="submit"] {
 
 	.nav li {
 		padding-inline: 0px;
+	}
+
+	.carousel-item {
+		max-width: 650px;
+		width: 100%;
 	}
 
 	.picture.left::before,
